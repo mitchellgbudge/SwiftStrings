@@ -14,7 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func palindromeButtonPressed(_ sender: Any) {
+        if isPalindrome(with: palindromeTextField.text!) == true {
+            palindromeLabel.text = "This is a palindrome!"
+        } else { palindromeLabel.text = "This is not a palindrome!" }
+        
+    }
+    @IBOutlet weak var palindromeTextField: UITextField!
+    @IBOutlet weak var palindromeLabel: UILabel!
+    
 
 }
 
